@@ -34,6 +34,62 @@ body {
     color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-    border: 3px solid rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(2px); 
+}
+
+.todo-app h1 {
+    font-size: 2rem;
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(200, 200, 200, 0.5);
+    color: #dbdbdb;
+}
+
+.input-area input::placeholder {
+    color: #ddd;
+}
+
+.input-area button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 17px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(200, 200, 200, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.input-area button:hover {
+    transform: scale(1.1);
+    background: #559955;
+}
+
+.todos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+#task-list {
+    width: 100%;
 }
