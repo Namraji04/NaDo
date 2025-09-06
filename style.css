@@ -58,11 +58,18 @@ body {
     border-radius: 22px;
     background: rgba(200, 200, 200, 0.5);
     color: #dbdbdb;
+    transition: all 0.2s ease;
 }
 
 .input-area input::placeholder {
     color: #ddd;
 }
+
+.input-area input:hover {
+    transform: scale(1.02);
+    background: #559955;
+}
+
 
 .input-area button {
     display: flex;
