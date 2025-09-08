@@ -9,11 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const taskText = taskInput.value.trim();
 
         if(!taskText) {
+            const items = taskList.querySelectorAll("li");
+
+            items.forEach(li => {
+                const checkbox = li.querySelector("input[type=checkbox]");
+                if(checkbox && checkbox.checked) {
+                    taskList.removeChild(li);
+                }
+            });
+
             return;
         }
         
         const li = document.createElement('li');
-        li.textContent = taskText;
+        li.innerHTML = `
+        <input type="checkbox" class="checkbox">
+        <span>${taskText}</span>
+        `
+
         taskList.appendChild(li);
         taskInput.value = '';
     };
